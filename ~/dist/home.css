@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/home/background.jpg);
+    background-size: cover;
+}
+.navbar{
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+.navbar a{
+    color: white
+}
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .menu u1{
+    display: flex;  
+}
+
+.navbar .menu u1 li{
+    margin: 0 25px;  
+}
+
+.navbar .menu-ham{
+    display: none;
+    width: 65px;
+    position: absolute;
+    right: 50px;
+    top: 50px
+}
+
+@media screen and (max-width: 900px){
+    .navbar .logo{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    .navbar{
+        padding:0;
+    }
+    .navbar .menu-ham{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.299);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .menu.mobile-menu{
+        margin-left: 0;
+        cursor: pointer;
+    }
+
+    .menu u1{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar .menu u1 li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+
+.home-box{
+    width: 50%;
+    height: 50vh;
+    top:45%;
+    left: 34.5%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: -150px;
+    margin-top: -100px;
+    background-color: rgb(6, 2, 20);
+
+}
+
+.home-box .text{
+    position: fixed;
+    color: gold;
+    top:45%;
+    left: 34.5%;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    font-weight: 600;
+}
+.home-box .text.first-text{
+    color: white;
+
+}
+.text.sec-text:before{
+    content: "";
+    position: fixed;
+    height: 10%;
+    width: 10%;
+    
+    border-left: 2px solid gold;
+    animation: animate 4s steps(12) infinite;
+
+}
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
